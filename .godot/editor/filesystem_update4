@@ -1,0 +1,95 @@
+res://env/lib/python3.10/site-packages/numpy/random/tests/data/sfc64-testset-2. 0x0.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arctanh.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arctanh.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arctanh.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arctan.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arctan.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arctan.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arcsinh.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arcsinh.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arcsinh.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arcsin.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arcsin.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arcsin.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arccosh.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arccosh.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arccosh.ulperrortol.translation
+res://env/lib64/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-cos.input.translation
+res://env/lib64/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-cos.output.translation
+res://env/lib64/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-cos.ulperrortol.translation
+res://env/lib64/python3.10/site-packages/numpy/random/tests/data/mt19937-testset-2. 0x0.translation
+res://env/lib64/python3.10/site-packages/numpy/random/tests/data/pcg64-testset-1. 0xdeadbeaf.translation
+res://env/lib64/python3.10/site-packages/numpy/random/tests/data/pcg64-testset-2. 0x0.translation
+res://env/lib64/python3.10/site-packages/numpy/random/tests/data/pcg64dxsm-testset-1. 0xdeadbeaf.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/msft.Open.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/msft.High.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/msft.Low.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/msft.Close.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/msft.Volume.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/msft.Adj. Close*.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Agriculture.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Architecture.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Art and Performance.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Biology.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Business.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Communications and Journalism.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Computer Science.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Education.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Engineering.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.English.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Foreign Languages.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Health Professions.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Math and Statistics.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Physical Sciences.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Psychology.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Public Administration.translation
+res://env/lib/python3.10/site-packages/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.Social Sciences and History.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arccos.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arccos.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-arccos.ulperrortol.translation
+res://env/lib/python3.10/site-packages/tornado/test/csv_translations/fr_FR.école.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-cbrt.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-cbrt.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-cbrt.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-cosh.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-cosh.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-cosh.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-exp2.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-exp2.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-exp2.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-exp.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-exp.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-exp.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-expm1.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-expm1.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-expm1.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log1p.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log1p.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log1p.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log2.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log2.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log2.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log10.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log10.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log10.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-log.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-sin.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-sin.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-sin.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-sinh.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-sinh.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-sinh.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-tan.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-tan.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-tan.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-tanh.input.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-tanh.output.translation
+res://env/lib/python3.10/site-packages/numpy/core/tests/data/umath-validation-set-tanh.ulperrortol.translation
+res://env/lib/python3.10/site-packages/numpy/random/tests/data/mt19937-testset-2. 0x0.translation
+res://env/lib/python3.10/site-packages/numpy/random/tests/data/pcg64-testset-1. 0xdeadbeaf.translation
+res://env/lib/python3.10/site-packages/numpy/random/tests/data/pcg64-testset-2. 0x0.translation
+res://env/lib/python3.10/site-packages/numpy/random/tests/data/pcg64dxsm-testset-1. 0xdeadbeaf.translation
+res://env/lib/python3.10/site-packages/numpy/random/tests/data/sfc64-testset-1. 0xdeadbeaf.translation
+res://env/lib64/python3.10/site-packages/numpy/random/tests/data/sfc64-testset-1. 0xdeadbeaf.translation

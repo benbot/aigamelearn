@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://8h6sjxh27crw"]
+
+[ext_resource type="Texture2D" uid="uid://wewgn58r56jh" path="res://icon.png" id="1_1ks1t"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="." groups=["player"]]
+position = Vector2(100, 100)
+texture = ExtResource("1_1ks1t")
+
+[node name="Icon2" type="Sprite2D" parent="." groups=["target"]]
+modulate = Color(1, 0, 0.152941, 1)
+position = Vector2(237, 216)
+texture = ExtResource("1_1ks1t")

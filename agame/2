@@ -1,0 +1,39 @@
+extends Node
+
+var server := WebSocketServer.new()
+
+func _ready():
+	server.client_connected.connect(_on_connection)
+	server.data_received.connect(_on_data)
+
+	server.listen(8889)
+	print("listenting")
+
+func _on_data(id):
+	var peer := server.get_peer(id)
+	var data = peer.get_packet()
+	match data:
+		'restart':
+			get_tree().get_nodes_in_group("player")[0].position = Vector2.ZERO
+		'state':
+			var img := get_viewport().get_texture().get_image().save_png_to_buffer()
+			print(get_viewport().get_texture().get_size())
+			peer.put_packet(img)
+		'reward':
+			var p := get_tree().get_nodes_in_group("player")[0]
+			var t := get_tree().get_nodes_in_group("target")[0]
+			peer.put_packet()
+
+
+
+
+func _on_connection(id, proto, name):
+	var peer := server.get_peer(id)
+	print("got stuff")
+	var img := get_viewport().get_texture().get_image().save_png_to_buffer()
+	print(get_viewport().get_texture().get_size())
+	peer.put_packet(img)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _physics_process(delta):
+	server.poll()
