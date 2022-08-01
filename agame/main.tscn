@@ -5,10 +5,10 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Icon" type="Sprite2D" parent="." groups=["player"]]
-position = Vector2(100, 100)
+position = Vector2(156, 126)
 texture = ExtResource("1_1ks1t")
 
 [node name="Icon2" type="Sprite2D" parent="." groups=["target"]]
 modulate = Color(1, 0, 0.152941, 1)
-position = Vector2(237, 216)
+position = Vector2(150, 370)
 texture = ExtResource("1_1ks1t")

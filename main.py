@@ -3,20 +3,22 @@ import struct
 import random
 import torch
 from torch import nn
+from torch.utils.tensorboard import SummaryWriter
 import websockets
 import asyncio
 import numpy as np
 from PIL import Image
 import io
 import os
+from collections import deque
 from torchsummary import summary
 
-gamma = 0.2
+gamma = 0.97
 
 def img_to_nparray(data):
     img = Image.open(io.BytesIO(data))
     array = np.array(img)
-    array = array.reshape(1, 3, 512, 512)
+    array = array.reshape(1, 3, 512, 514)
     return array
 
 async def hello():
@@ -27,13 +29,14 @@ async def hello():
         print("done")
 
 async def train(socket):
-    ep = 0.9
+    ep = 1.0
     for i in range(1000):
         await socket.send('restart')
         r = 0
         mv_count = 0
-        max_mv_count = 200
+        max_mv_count = 100
         state = 0
+        past_states = deque(maxlen=100)
 
         await socket.send("state")
         img_data = await socket.recv()
@@ -41,9 +44,9 @@ async def train(socket):
         r = await socket.recv()
         r = struct.unpack('f', r)[0]
         array = img_to_nparray(img_data)
-        state = torch.from_numpy(array).float().cuda()
+        state = torch.from_numpy(array).float()#.cuda()
 
-        while abs(r) != 1 and mv_count < max_mv_count:
+        while abs(r) != 10 and mv_count < max_mv_count:
             mv_count += 1
             q = model(state)
             np_q = q.cpu().data.numpy()
@@ -59,46 +62,58 @@ async def train(socket):
             r = await socket.recv()
             r = struct.unpack('f', r)[0]
             array2 = img_to_nparray(img_data)
-            state2 = torch.from_numpy(array2).float().cuda()
-            with torch.no_grad():
-                q2 = model(state2)
-            maxq = torch.max(q2)
+            state2 = torch.from_numpy(array2).float()#.cuda()
+            past_states.append((state, action, state2, r, r == 10))
 
-            if abs(r) == 1:
-                Y = r + gamma * maxq
-            else:
-                Y = r
+        if (i+1) % 5 == 0 and len(past_states) >= 50:
+            print("starting training")
+            sample = random.sample(past_states, 10)
+            for ps in sample:
+                states = torch.cat([s for (s, a, s2, r, d) in sample])
+                actions = torch.Tensor([a for (s, a, s2, r, d) in sample])
+                states2 = torch.cat([s2 for (s, a, s2, r, d) in sample])
+                rewards = torch.Tensor([r for (s, a, s2, r, d) in sample])
+                dones = torch.Tensor([d for (s, a, s2, r, d) in sample])
 
-            X = torch.Tensor([q.squeeze()[action]])
-            X.requires_grad=True
-            Y = torch.Tensor([Y])
-            loss = loss_fn(X, Y)
-            print(loss.data)
-            optim.zero_grad()
-            loss.backward()
-            optim.step()
-            state = state2
-            if ep > 0.1:
-                ep -= 1/1000
+                q = model(states)
+
+                with torch.no_grad():
+                    q2 = model(states2)
+                    maxq = torch.max(q2)
+                    Y = rewards + (gamma * maxq * (1-dones))
+
+                maxq = torch.max(q2)
+
+                actions = actions.long().unsqueeze(dim=1)
+                X = q.gather(dim=1, index=actions)
+                loss = loss_fn(X, Y)
+                writer.add_scalar('loss', loss.data)
+                writer.add_scalar('r', r)
+                optim.zero_grad()
+                loss.backward()
+                optim.step()
+                print("finished step")
+                state = state2
+                if ep > 0.1:
+                    ep -= 1/100
+            print('epoch ' + str(i) + ' done')
 
 
 model = nn.Sequential(
-    nn.Conv2d(3, 7, 3),
+    nn.Conv2d(3, 8, 3),
     nn.MaxPool2d(3),
-    nn.Conv2d(7, 13, 1),
-    nn.ReLU(),
-    nn.Conv2d(13, 8, 1),
-    nn.ReLU(),
     nn.Flatten(),
+    nn.ReLU(),
     nn.Linear(231200, 500),
     nn.ReLU(),
     nn.Linear(500, 500),
     nn.ReLU(),
     nn.Linear(500, 8),
     nn.Softmax(1)
-).cuda()
+)#.cuda()
 loss_fn = nn.MSELoss()
 optim = torch.optim.Adam(model.parameters(), lr=1e-3)
+writer = SummaryWriter()
 
 summary(model, (3, 512, 512))
 

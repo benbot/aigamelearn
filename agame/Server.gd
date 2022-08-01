@@ -14,7 +14,7 @@ func _on_data(id):
 	var data = peer.get_packet().get_string_from_utf8()
 	match str(data):
 		'restart':
-			get_tree().get_nodes_in_group("player")[0].position = Vector2(100, 100)
+			get_tree().get_nodes_in_group("player")[0].position = Vector2(400, 400)
 		'state':
 			var img := get_viewport().get_texture().get_image().save_png_to_buffer()
 			peer.put_packet(img)
@@ -23,11 +23,11 @@ func _on_data(id):
 			var t: Node2D = get_tree().get_nodes_in_group("target")[0]
 			var r: float = p.position.distance_to(t.position)
 			if r > 512 or p.position.x < 0 or p.position.y < 0 or p.position.y > 512 or p.position.x > 512:
-				r = -1.0
+				r = -10.0
 			elif r < 50:
-				r = 1.0
+				r = 10.0
 			else:
-				r = 1 - r / 512
+				r = -1 * pow((r / 512 * 10), 3)
 			var a = PackedByteArray()
 			a.resize(4)
 			a.encode_float(0, r)
@@ -39,7 +39,6 @@ func _on_data(id):
 		'1':
 			var p: Node2D = get_tree().get_nodes_in_group("player")[0]
 			p.position.x += 10
-			p.position.y -= 10
 		'2':
 			var p: Node2D = get_tree().get_nodes_in_group("player")[0]
 			p.position.y += 10
